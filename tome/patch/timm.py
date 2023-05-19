@@ -135,7 +135,7 @@ def apply_patch(
         "source": None,
         "trace_source": trace_source,
         "prop_attn": prop_attn,
-        "class_token": model.cls_token is not None,
+        "class_token": hasattr(model, 'cls_token'),  #model.cls_token is not None,
         "distill_token": False,
     }
 
